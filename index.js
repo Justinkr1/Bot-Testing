@@ -10,7 +10,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds,
 client.on("ready", () => {
     console.log("Bot is online!");
 
-    client.user.setActivity(`Big Bunga`, {type: "WATCHING" });
+    client.user.setActivity(`IDK`, {type: "IDK" });
 
 })
 
@@ -32,26 +32,12 @@ client.on("messageCreate", (message => {
 // test command
 
 if (command === 'test') {
-    message.channel.send("Bot is working!")
+    message.channel.send("If you are in class CSC-325 React with :one:!");
 }
 
 
 
-
-
-
-
-
 }))
-
-
-
-
-
-
-
-
-
 
 
 
