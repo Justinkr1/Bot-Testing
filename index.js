@@ -35,7 +35,20 @@ if (command === 'test') {
     message.channel.send("If you are in class CSC-325 React with :one:!");
 }
 
+// testing create channel
+if (command === 'create-channel') {
+    const channelName = message.content.split(" ").slice(1).join(" ");
+    const guild = message.guild;
 
+    if (!channelName) {
+      return message.channel.send("Please provide the course number and channel # (ex. CSC_325_G1).");
+    }
+
+    guild.channels
+      .create(channelName, { type: "text" })
+      .then(channel => message.channel.send(Created ,{channelName} ,channel))
+      .catch(console.error);
+  }
 
 }))
 
